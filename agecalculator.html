@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age calulator</title>
+  <style>
+    .content{
+      width: 100%;
+      height: 95vh;
+      display: flex;
+      background-image: url(./OIP.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+}
+    .content1{
+      align-items: center;
+      justify-content: center;
+      height: 40vh;
+      width: 50%;
+      margin: auto;
+      display:flex;
+      flex-direction: column;
+      background-color: rgb(199, 215, 228);
+      border-radius: 4vh;
+     
+     }
+    .content1 span{
+     padding: 4vh;
+    }
+    button{
+     height: 5vh;
+     background-color:#ff1493;
+     border-radius: 2vh;
+     border: none;
+     padding-left: 3vh;
+     padding-right: 3vh;
+   
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="content1">
+      <span>Enter your Birth Date:<input type="text" id='inpt' placeholder="Your Birth date..?"></span>
+      <button onclick="generate()">Generate</button>
+      <h4 id="age"></h4>
+  </div>
+    </div>
+    <script>
+      function generate()
+      {
+        var x=document.getElementById("inpt").value;
+        var currentdate=2024;
+        var age=currentdate-x;
+        document.getElementById('age').innerHTML="Your Current Age is:"+" "+age;
+
+      }
+    </script>
+  
+</body>
+</html>
